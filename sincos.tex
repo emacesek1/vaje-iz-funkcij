@@ -255,6 +255,54 @@ x= \arctg a +k\pi, k \in \mathbb{Z}
 
 Kadar v enačbi nastopajo različne kotne funkcije, poskušamo vse izraziti le z eno. Pomagamo si z zvezami med kotnimi funkcijami in adicijskimi izreki. Če je enačba sestavljena samo iz členov $\sin^2x$, $\cos^2x$, $\sin\cdot\cos$, $1$(vsi členi 2. stopnje), lahko enačbo delimo s $\cos^2x$ in rešujemo kvadratno enačbo za $\tg x$. Za lažje reševanje lahko to uvedemo kot novo neznanko. 
 
+\subsection{Grafi kotnih funkcij}
+Kot smo spoznali, so kotne funkcije nekaj osnovnega za razumevanja tako preproste kot osnovne geometrije. Prav tako so nekaj posebnega tudi grafi kotnih funkcij, katerih periodičnost je iz njih lepo razvidna. \\
+
+Graf, ki predstavlja funkcijo $f(x) = sinx$, imenujemo sinusoida. Pri risanju vedno privzamemo, da je argument $x$ kot, izražen v radianih.
+
+% graf sinusa v osnovni obliki.
+
+Opazimo, da je funkcija sinus periodična funkcija s periodo $2\pi$, ter da je to liha funkcija, torej
+\[
+sin(-x) = -sin(x)
+\]
+Sinus je funkcija, ki je definirana na celi realni osi, zavzame pa le vrednosti na intervalu $[-1, 1]$. Kot je razvidno z grafa, so ničle funkcije vsi večkratniki števila $\pi$ in sicer 
+\[
+x = k\pi, \:   k\in \mathbb{Z}.
+\]
+
+Funkcija periodično zavzame tudi maksimume in minimume. V točkah, kjer je 
+\[
+x = \frac{\pi}{2} + 2k\pi \: ; \: k \in \mathbb{Z},
+\]
+doseže svoje maksimume ($y = 1$), v točkah pa, kjer je  
+\[
+x = \frac{3\pi}{2} + 2k\pi \: ; \: k \in \mathbb{Z},
+\] 
+doseže svoje minimume ($y = -1$).
+
+Očitno je, da je funkcija sinus zvezna.\\
+
+Funkcija $f(x) = cosx$ si je s sinusom zelo podobna.
+
+% graf kosinusa v osnovni obliki
+Razlikujeta se pravzaprav le v tem, da je, če opazujemo grafa funkcij, graf kosinusa za $\frac{\pi}{2}$ zamaknjen graf sinusa v levo. Tokrat je funkcija kosinus soda, kar pomeni, da velja
+\[
+cos(-x) = cosx
+\]
+Definicijsko območje in zaloga vrednosti sta enaka kot pri sinusu, se pa kosinus razlikuje v ničlah in ekstremih. Funkcija kosinus ima ničle v točkah 
+\[
+x = \frac{\pi}{2} + k\pi \: ; \: k \in \mathbb{Z},
+\]
+maksimume zavzame pri
+\[
+x =2\pi + 2 k\pi, \:   k\in \mathbb{Z}
+\]
+in minimume pri
+\[
+x =\pi + 2 k\pi, \:   k\in \mathbb{Z}.
+\]
+
 
 \section{Vaje}
 \label{sec:sin-cos-vaje}
@@ -277,15 +325,36 @@ Kadar v enačbi nastopajo različne kotne funkcije, poskušamo vse izraziti le z
 % v okolje "odgovor".
 
 \begin{vaja}
-  Izračunajte $\sin(1928398213 \pi)$.
+  Narišite graf funkcije, ki je podan s predpisom $f(x) = 3sin(4x)$. Kje ima funkcija ničle, maksimume in minimume, kakšna sta definicijsko območje in zaloga vrednosti?
 
   \begin{odgovor}
-    $0$.
+Graf funkcije je takšen:\\
+	\definecolor{qqwuqq}{rgb}{0.,0.6,0.}
+	\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+
+	\draw [color=cqcqcq,, xstep=1.57cm,ystep=1.0cm] (-4.3,-4.3) grid (6.,4.3);
+	\draw[->,color=black] (-4.3,0.) -- (6.,0.);
+	\draw[shift={(-3.141592653589793,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi$};
+	\draw[shift={(-1.5707963267948966,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi/2$};
+	\draw[shift={(1.5707963267948966,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi/2$};
+	\draw[shift={(3.141592653589793,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi$};
+	\draw[shift={(4.71238898038469,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $3\pi/2$};
+	
+	\draw[->,color=black] (0.,-4.3) -- (0.,4.3);
+	\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.,4.}
+	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+	\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+	\clip(-4.3,-4.3) rectangle (6.,4.3);
+	\draw[line width=1.5pt,color=qqwuqq,smooth,samples=100,domain=-4.3:6] plot(\x,{3.0*sin((4.0*(\x))*180/pi)});
+
+
+\end{tikzpicture}
   \end{odgovor}
 \end{vaja}
 
 \begin{vaja}
-  Še ena vaja.
+  Podana je funkcija $f(x) = \frac{1}{2} cos(2x)$. Zapišite vsa presečišča grafa funkcije z osjo $x$ in z osjo $y$. Koordinate naj bodo izračunane točno. Zapišite tudi definicijsko območje in zalogo vrednosti. 
 
   \begin{odgovor}
     Rešitev bi bila tu.
