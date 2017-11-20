@@ -46,6 +46,34 @@ Funkcije sinus, kosinus, tangens in kotagens imenujemo kotne oziroma trigonometr
 \draw[color=qqwuqq] (-0.68,1.47) node {$\alpha$};
 \end{tikzpicture}
 
+\begin{zgled}
+V pravokotnem trikotniku, kjer je kot $\gamma= 90^{\circ}$, merijo stranice $a=9$, $b=12$ in $c=15$. Izračunaj vrednosti $\cos\alpha$, $\sin\alpha$, $\tg\alpha$, $\tg\beta$ in izračunaj kota $\alpha$ in $\beta$. Določi še vrednost $\cos\beta$. Kaj opaziš? Rezultate razmerij zaokrožuj na štiri decimalna mesta natančno, kotov pa na dve decimalni mesti natančno.
+\end{zgled}
+
+\begin{resitev}
+Glede na kot $\alpha$ je $b$ priležna kateta, $a$ nasprotna kateta in $c$ hipotenuza. Po definiciji:
+\begin{equation*}
+\cos\alpha= \frac{b}{c}= 0,8000 \quad \quad
+\sin\alpha = \frac{a}{c}= 0,6000 \quad \quad
+\tg \alpha= \frac{a}{b}= 0,7500
+\end{equation*}
+Glede na kot $\beta$ je $a$ priležna kateta, $b$ nasprotna kateta in $c$ hipotenuza. Po definiciji:
+\begin{equation*}
+\tg\beta= \frac{b}{a}= 1,3333 \quad \quad
+\cos\beta = \frac{a}{c}= 0,6000
+\end{equation*}
+Opazimo, da imata $\cos\beta$ in $\sin\alpha$ isto vrednost, saj sta kota komplementarna.
+Izračunajmo še kota. Ugotovili smo že, da velja $\cos\alpha= \frac{b}{c}$. Iz tega sledi:
+\begin{equation*}
+\alpha= \arccos \left(\frac{b}{c}\right) = 36,87^{\circ}
+\end{equation*}
+Enako še za $\beta$:
+\begin{equation*}
+\beta= \arctg \left(\frac{b}{a}\right) = 53,13^{\circ}
+\end{equation*}
+Pomoč: za izračun $\arccos x$ v kalkuator vtipkajte $\cos^{-1}x$.
+\end{resitev}
+
 \subsection{Zveze med kotnimi funkcijami}
 
 Naslednje enačbe uporabljamo pri poenostavljanju in reševanju trigonometričnih enačb. Funkciji tangens in kotangens lahko definiramo s sinusom in kosinusom:
@@ -323,6 +351,27 @@ x =\pi + 2 k\pi, \:   k\in \mathbb{Z}.
 %
 % Sem vstavimo vaje s pomočjo okolja "vaja". Odgovor napišemo v vajo,
 % v okolje "odgovor".
+
+\begin{vaja}
+V pravokotnem trikotniku, kjer je kot $\beta= 90^{\circ}$, merita stranici $a=5$ in $b=13$. Z uporabo kotnih funkcij določi kota $\alpha$ in $\gamma$ na minuto natančno, ter izračunaj stranico $c$. Izračunaj še vrednosti $\sin\gamma$, $\cos\alpha$, $\tg\alpha$ in $\ctg\alpha$. Kote izračunaj na minuto natančno, stranico na dve mesti natančno, vrednosti kotnih funkcij pa na štiri decimalna mesta natančno.
+	\begin{odgovor}
+$\alpha=22^{\circ}37'$, $\gamma=67^{\circ}23'$, $c=12$, $\sin\gamma=\cos\alpha=0.9231$, $\tg\alpha=0.4167$ in $\ctg\alpha=2.4000$
+	\end{odgovor}
+\end{vaja}
+
+\begin{vaja}
+V enkokrakem trapezu merijo stranice $a=21$, $c=13$ in krak $b=7$. Izračunaj kot, ki ga oklepata stranica $a$ in $b$ na tri veljavna mesta natančno.
+	\begin{odgovor}
+$\alpha=55,2^{\circ}$
+	\end{odgovor}
+\end{vaja}
+
+\begin{vaja}
+V rombu merita diagonali $e=26,8$ in $f=12,5$. Izračunajte ostri kot romba na minuto natančno.
+	\begin{odgovor}
+$\alpha=50^{\circ}1'$
+	\end{odgovor}
+\end{vaja}
 
 \begin{vaja}
   Narišite graf funkcije, ki je podan s predpisom $f(x) = 3sin(4x)$. Kje ima funkcija ničle, maksimume in minimume, kakšna sta definicijsko območje in zaloga vrednosti?
