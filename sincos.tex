@@ -288,7 +288,28 @@ Kot smo spoznali, so kotne funkcije nekaj osnovnega za razumevanja tako preprost
 
 Graf, ki predstavlja funkcijo $f(x) = sinx$, imenujemo sinusoida. Pri risanju vedno privzamemo, da je argument $x$ kot, izražen v radianih.
 
-% graf sinusa v osnovni obliki.
+% graf sinusa v osnovni obliki
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.6,0.}
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.6cm,ystep=1.0cm] (-3.5,-2.5) grid (7.5,2.5);
+\draw[->,color=black] (-3.5,0.) -- (7.5,0.);
+\draw[shift={(-3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi$};
+\draw[shift={(-1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi/2$};
+\draw[shift={(1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi/2$};
+\draw[shift={(3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi$};
+\draw[shift={(4.71,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $3\pi/2$};
+\draw[shift={(6.28,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $2\pi$};
+\draw[->,color=black] (0.,-2.5) -- (0.,2.5);
+\foreach \y in {-2.,-1.,1.,2.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-3.5,-2.5) rectangle (7.5,2.5);
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=-3.5:7.5] plot(\x,{sin(((\x))*180/pi)});
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=ffqqqq,domain=-3.5:7.5] plot(\x,{(--1.5707963267948966-0.*\x)/1.5707963267948966});
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=ffqqqq,domain=-3.5:7.5] plot(\x,{(-4.40-0.*\x)/4.40});
+\end{tikzpicture}
 
 Opazimo, da je funkcija sinus periodična funkcija s periodo $2\pi$, ter da je to liha funkcija, torej
 \[
@@ -314,6 +335,28 @@ Očitno je, da je funkcija sinus zvezna.\\
 Funkcija $f(x) = cosx$ si je s sinusom zelo podobna.
 
 % graf kosinusa v osnovni obliki
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.6,0.}
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.57cm,ystep=1.0cm] (-3.5,-2.5) grid (7.5,2.5);
+\draw[->,color=black] (-3.5,0.) -- (7.5,0.);
+\draw[shift={(-3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi$};
+\draw[shift={(-1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi/2$};
+\draw[shift={(1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi/2$};
+\draw[shift={(3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi$};
+\draw[shift={(4.71,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $3\pi/2$};
+\draw[shift={(6.28,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $2\pi$};
+\draw[->,color=black] (0.,-2.5) -- (0.,2.5);
+\foreach \y in {-2.,-1.,1.,2.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-3.5,-2.5) rectangle (7.5,2.5);
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=-3.5:7.5] plot(\x,{cos(((\x))*180/pi)});
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=ffqqqq,domain=-3.5:7.5] plot(\x,{(--6.283185307179586-0.*\x)/6.283185307179586});
+\draw [line width=0.8pt,dash pattern=on 2pt off 2pt,color=ffqqqq,domain=-3.5:7.5] plot(\x,{(-3.141592653589793-0.*\x)/3.141592653589793});
+\end{tikzpicture}
+
 Razlikujeta se pravzaprav le v tem, da je, če opazujemo grafa funkcij, graf kosinusa za $\frac{\pi}{2}$ zamaknjen graf sinusa v levo. Tokrat je funkcija kosinus soda, kar pomeni, da velja
 \[
 cos(-x) = cosx
@@ -330,6 +373,64 @@ in minimume pri
 \[
 x =\pi + 2 k\pi, \:   k\in \mathbb{Z}.
 \]
+
+Funkcija $f(x) = tanx$ je, kot smo že prej spoznali, pravzaprav funkcija razmerja med sinusom in kosinusom:
+\[
+f(x) = tanx = \frac{sinx}{cosx}.
+\]
+Tangens torej zavzame vrednost $f(x) = 0$ v ničlah sinusa, v ničlah kosinusa pa ima graf tangensa pole. 
+Definicijsko območje funkcije je torej unija intervalov ($\frac{\pi}{2} + k\pi$, $\frac{3\pi}{2} + k\pi$), pri čemer je $k \in \mathbb{Z}$. \\
+
+% graf tangensa v osnovni obliki
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.6,0.}
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.57cm,ystep=1.0cm] (-4.5,-4.3) grid (4.5,4.3);
+\draw[->,color=black] (-4.7,0.) -- (4.7,0.);
+\draw[shift={(-3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi$};
+\draw[shift={(-1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi/2$};
+\draw[shift={(1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi/2$};
+\draw[shift={(3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi$};
+\draw[->,color=black] (0.,-4.6) -- (0.,4.6);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.5,-4.3) rectangle (4.5,4.3);
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=-4.5:-1.58] plot(\x,{tan(((\x))*180/pi)});
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=-1.56:1.56] plot(\x,{tan(((\x))*180/pi)});
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=1.58:4.5] plot(\x,{tan(((\x))*180/pi)});
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=ffqqqq] (-1.57,-4.3) -- (-1.57,4.3);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=ffqqqq] (1.57,-4.3) -- (1.57,4.3);
+\end{tikzpicture}
+
+Od kotnih funkcij nam ostane le še funkcija $f(x) = cotx$, ki pa je pravzaprav inverz funkcije tangensa. Ničle ima tam, kjer ima tangens pole, in pole tam, kjer ima tangens pole.
+Graf funkcije je torej takšen: \\
+
+% graf kotangensa v osnovni obliki
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.6,0.}
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.57cm,ystep=1.0cm] (-4.5,-4.3) grid (4.5,4.3);
+\draw[->,color=black] (-4.7,0.) -- (4.7,0.);
+\draw[shift={(-3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi$};
+\draw[shift={(-1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi/2$};
+\draw[shift={(1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi/2$};
+\draw[shift={(3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi$};
+\draw[->,color=black] (0.,-4.6) -- (0.,4.6);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.5,-4.3) rectangle (4.5,4.3);
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=-4.5:-3.15] plot(\x,{cot(((\x))*180/pi)});
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=-3.13:-0.01] plot(\x,{cot(((\x))*180/pi)});
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=0.01:3.13] plot(\x,{cot(((\x))*180/pi)});
+\draw[line width=1.3pt,color=qqwuqq,smooth,samples=100,domain=3.15:4.5] plot(\x,{cot(((\x))*180/pi)});
+\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=ffqqqq] (-3.14,-4.3) -- (-3.14,4.3);
+\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=ffqqqq] (0.,-4.3) -- (0.,4.3);
+\draw [line width=1.2pt,dash pattern=on 2pt off 2pt,color=ffqqqq] (3.14,-4.3) -- (3.14,4.3);
+\end{tikzpicture}
 
 
 \section{Vaje}
