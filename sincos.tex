@@ -5,49 +5,36 @@
 
 \section{Pregled snovi}
 \label{sec:sin-cos-pregled-snovi}
-
 \subsection{Definicije kotnih funkcij v pravokotnem trikotniku}
-
 Funkcije sinus, kosinus, tangens in kotagens imenujemo kotne oziroma trigonometrične funkcije. V nadaljevanju jih bomo označevali z $\sin x$, $\cos x$, $\tg x$ in $\ctg x$. V pravokotnem trikotniku jih definiramo z razmerji stranic in so odvisne od velikosti kota. 
 
-\begin{equation*}
-\begin{split}
-\sin \alpha &= \frac{\text{nasprotna kateta}}{\text{hipotenuza}} \\
-\cos \alpha &= \frac{\text{priležna kateta}}{\text{hipotenuza}}  
-\end{split}
-\quad
-\begin{split}
-\tg \alpha &= \frac{\text{nasprotna kateta}}{\text{priležna kateta}}\\
-\ctg \alpha &= \frac{\text{priležna kateta}}{\text{nasprotna kateta}}
-\end{split}
-\end{equation*}
+
 
 \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
-\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
-\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
 \begin{tikzpicture}[line cap=round, line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\clip(-4.3,-2.46) rectangle (7.06,6.3);
-\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-2.32,0.9) -- (4.040307722752683,1.115323801513878) -- (1.42,4.14) -- cycle;
-\draw[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (1.152776418235458,3.908501496011466) -- (1.3842749222239916,3.641277914246924) -- (1.6514985039885335,3.872776418235458) -- (1.42,4.14) -- cycle; 
-\draw [shift={(-2.32,0.9)},line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1.9389682973337594:1.2) arc (1.9389682973337594:40.902716394791724:1.2) -- cycle;
-\draw [line width=2.pt,color=zzttqq] (-2.32,0.9)-- (4.040307722752683,1.115323801513878);
-\draw [line width=2.pt,color=zzttqq] (4.040307722752683,1.115323801513878)-- (1.42,4.14);
-\draw [line width=2.pt,color=zzttqq] (1.42,4.14)-- (-2.32,0.9);
-\draw [fill=ududff] (-2.32,0.9) circle (2.5pt);
-\draw[color=ududff] (-2.44,1.25) node {$A$};
-\draw [fill=ududff] (1.42,4.14) circle (2.5pt);
-\draw[color=ududff] (1.56,4.51) node {$C$};
-\draw [fill=xdxdff] (4.040307722752683,1.115323801513878) circle (2.5pt);
-\draw[color=ududff] (4.18,1.49) node {$B$};
-\draw[color=zzttqq] (1.1,0.49) node {\text{hipotenuza}};
-\draw[color=zzttqq] (4.14,3.16) node {\text{nasprotna kateta}};
-\draw[color=zzttqq] (-1.36,3.06) node {\text{priležna kateta}};
-\draw[color=qqwuqq] (-0.68,1.47) node {$\alpha$};
+\draw[line width=1.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (1.152776418235458,3.908501496011466) -- (1.3842749222239916,3.641277914246924) -- (1.6514985039885335,3.872776418235458) -- (1.42,4.14) -- cycle; 
+\draw [shift={(-2.32,0.9)},line width=1.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0.01628264631072814:1.2) arc (0.01628264631072814:40.902716394791724:1.2) -- cycle;
+\draw [line width=1.pt] (-2.32,0.9)-- (4.2252335288255765,0.9018600624050446);
+\draw [line width=1.pt] (4.2252335288255765,0.9018600624050446)-- (1.42,4.14);
+\draw [line width=1.pt] (1.42,4.14)-- (-2.32,0.9);
+\draw (-2.44,1.25) node {$A$};
+\draw (1.56,4.51) node {$C$};
+\draw (4.36,1.27) node {$B$};
+\draw (1.18,0.40) node {\text{hipotenuza}};
+\draw (4.54,3.06) node {\text{nasprotna kateta}};
+\draw (-1.9,3.06) node {\text{priležna kateta}};
+\draw[color=qqwuqq] (-0.66,1.47) node {$\alpha$};
 \end{tikzpicture}
 
+\begin{align*}
+\sin \alpha &= \frac{\text{nasprotna kateta}}{\text{hipotenuza}} \\
+\cos \alpha &= \frac{\text{priležna kateta}}{\text{hipotenuza}}  \\
+\tg \alpha &= \frac{\text{nasprotna kateta}}{\text{priležna kateta}}\\
+\ctg \alpha &= \frac{\text{priležna kateta}}{\text{nasprotna kateta}}
+\end{align*}
+
 \begin{zgled}
-V pravokotnem trikotniku, kjer je kot $\gamma= 90^{\circ}$, merijo stranice $a=9$, $b=12$ in $c=15$. Izračunaj vrednosti $\cos\alpha$, $\sin\alpha$, $\tg\alpha$, $\tg\beta$ in izračunaj kota $\alpha$ in $\beta$. Določi še vrednost $\cos\beta$. Kaj opaziš? Rezultate razmerij zaokrožuj na štiri decimalna mesta natančno, kotov pa na dve decimalni mesti natančno.
+V pravokotnem trikotniku s kotom $\gamma= 90^{\circ}$, merijo stranice $a=9$, $b=12$ in $c=15$. Izračunaj vrednosti $\cos\alpha$, $\sin\alpha$, $\tg\alpha$, $\tg\beta$ na štiri decimalna mesta natančno. Izračunaj še kota $\alpha$ in $\beta$ na dve decimalni mesti natančno.
 \end{zgled}
 
 \begin{resitev}
@@ -59,10 +46,8 @@ Glede na kot $\alpha$ je $b$ priležna kateta, $a$ nasprotna kateta in $c$ hipot
 \end{equation*}
 Glede na kot $\beta$ je $a$ priležna kateta, $b$ nasprotna kateta in $c$ hipotenuza. Po definiciji:
 \begin{equation*}
-\tg\beta= \frac{b}{a}= 1,3333 \quad \quad
-\cos\beta = \frac{a}{c}= 0,6000
+\tg\beta= \frac{b}{a}= 1,3333 
 \end{equation*}
-Opazimo, da imata $\cos\beta$ in $\sin\alpha$ isto vrednost, saj sta kota komplementarna.
 Izračunajmo še kota. Ugotovili smo že, da velja $\cos\alpha= \frac{b}{c}$. Iz tega sledi:
 \begin{equation*}
 \alpha= \arccos \left(\frac{b}{c}\right) = 36,87^{\circ}
@@ -77,11 +62,11 @@ Pomoč: za izračun $\arccos x$ v kalkuator vtipkajte $\cos^{-1}x$.
 \subsection{Zveze med kotnimi funkcijami}
 
 Naslednje enačbe uporabljamo pri poenostavljanju in reševanju trigonometričnih enačb. Funkciji tangens in kotangens lahko definiramo s sinusom in kosinusom:
-\begin{equation*}
-\tg \alpha = \frac{\sin \alpha}{\cos \alpha}, \quad
-\ctg \alpha = \frac{\cos \alpha}{\sin \alpha} \quad 
+\begin{align*}
+\tg \alpha &= \frac{\sin \alpha}{\cos \alpha}, &
+\ctg \alpha &= \frac{\cos \alpha}{\sin \alpha} \quad &
 \Rightarrow \ctg \alpha \cdot \tg \alpha = 1
-\end{equation*}
+\end{align*}
 Funkciji sinus in kosinus pa povezuje enačba
 \begin{equation*}
 \sin^2 \alpha + \cos^2 \alpha = 1.
@@ -91,7 +76,6 @@ Funkciji sinus in kosinus pa povezuje enačba
 1+ \tg^2 \alpha = \frac{1}{\cos^2\alpha}\quad \text{in} \quad
 1+ \ctg^2 \alpha= \frac{1}{\sin^2\alpha}.
 \end{equation*}
-
 V pravokotnem trikotniku, kjer je $\gamma={90}^{\circ}$, sta kota $\alpha$ in $\beta$ komplementarna. Zato zanju velja $\alpha+\beta= \frac{\pi}{2}$. Tako dobimo zveze:
 \begin{align*}
 \sin\alpha &= \cos(\frac{\pi}{2}- \alpha) \\
@@ -102,7 +86,9 @@ V pravokotnem trikotniku, kjer je $\gamma={90}^{\circ}$, sta kota $\alpha$ in $\
 
 \subsection{Definicije kotnih funkcij na enotski krožnici}
 
-Kotne funkcije definiramo tudi s pomočjo enotske krožnice. Poltrak iz koordinatnega izhodišča s pozitivnim delom abscisne osi določa kot $\alpha$. S pravokotnico na $x$-os skozi presečišče krožnice in poltraka dobimo pravokotni trikotnik s hipotenuzo dolžine 1. Abscisa presečišča $T$ tako predstavlja vrednost funkcije $\cos\alpha$, ordinata pa vrednost funkcije $\sin\alpha$. Na sliki rdeči znaki minus in plus ponazarjajo, v katerih kvadrantih je funkcija kosinus negativna in v katerih pozitivna. Enako označuje modra barva predznak funkcije sinus.
+Kotne funkcije definiramo tudi s pomočjo enotske krožnice. Poltrak iz koordinatnega izhodišča s pozitivnim delom abscisne osi določa kot $\alpha$. Presečišče krožnice in poltraka vzamemo za točko $P$. S pravokotnico na $x$-os skozi $P$ dobimo pravokotni trikotnik s hipotenuzo dolžine 1. Abscisa presečišča $P$ tako predstavlja vrednost funkcije $\cos\alpha$, ordinata pa vrednost funkcije $\sin\alpha$. 
+
+Funkciji tangens in kotangens prav tako definiramo s pomočjo enotske krožnice in poltraka iz izhodišča. Za ponazoritev $\tg\alpha$ narišemo vzporednico $y$-osi skozi $(1,0)$. V dobljenem pravokotnem trikotniku meri kateta, ki leži na $x$-osi, 1. Ordinata presečišča vzporednice in poltraka predstavlja velikost funkcije $\tg\alpha$. Za ponazoritev $\ctg\alpha$ pa narišemo vzporednico $x$-osi skozi (0,1). Abscisa presečišča vzporednice in poltraka predstavlja velikost funkcije $\ctg\alpha$. 
 
 \
 
@@ -111,6 +97,10 @@ Kotne funkcije definiramo tudi s pomočjo enotske krožnice. Poltrak iz koordina
 \definecolor{qqqqff}{rgb}{0.,0.,1.}
 \definecolor{wqwqwq}{rgb}{0.3764705882352941,0.3764705882352941,0.3764705882352941}
 \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqffqq}{rgb}{0.,1.,0.}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\definecolor{yqyqyq}{rgb}{0.5019607843137255,0.5019607843137255,0.5019607843137255}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=3.0cm,y=3.0cm]
 \draw[->,color=black] (-1.81936,0.) -- (2.0581866666666713,0.);
 \foreach \x in {-1.5,-1.,-0.5,0.5,1.,1.5,2.}
@@ -126,79 +116,26 @@ Kotne funkcije definiramo tudi s pomočjo enotske krožnice. Poltrak iz koordina
 \draw [line width=2.pt,domain=0.0:2.0581866666666713] plot(\x,{(-0.--0.8333363648462626*\x)/0.5527662281876642});
 \draw [line width=2.pt,color=qqqqff] (0.5527662281876642,0.8333363648462626)-- (0.5527662281876642,0.);
 \draw [line width=2.pt,color=ffqqqq] (0.5527662281876642,0.)-- (0.,0.);
-\draw [color=qqqqff](0.19576,1.4960711111111107) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=ffqqqq](1.5120533333333375,0.24476444444444524) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=qqqqff](-0.30384,1.4960711111111107) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=ffqqqq](-1.53947,0.22428444444444524) node[anchor=north west] {$\mathbf{-}$};
-\draw [color=ffqqqq](-1.5394666666666645,-0.119448888888887572) node[anchor=north west] {$\mathbf{-}$};
-\draw [color=qqqqff](-0.2925866666666638,-1.2297955555555531) node[anchor=north west] {$\mathbf{-}$};
-\draw [color=ffqqqq](1.5120533333333375,-0.14476444444444524) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=qqqqff](0.1672,-1.2366222222222197) node[anchor=north west] {$\mathbf{-}$};
 \draw [fill=uuuuuu] (1.,0.) circle (1.5pt);
 \draw[color=uuuuuu] (1.1638933333333372,0.11430222222222082) node {$(1, 0)$};
 \draw [fill=uuuuuu] (0.,1.) circle (1.5pt);
-\draw[color=uuuuuu] (0.15354666666666986,1.1171911111111112) node {$(0, 1)$};
+\draw[color=uuuuuu] (-0.15354666666666986,1.1171911111111112) node {$(0, 1)$};
 \draw [fill=uuuuuu] (-1.,0.) circle (1.5pt);
-\draw[color=uuuuuu] (-0.8094933333333308,0.10001777777777895) node {$(-1, 0)$};
+\draw[color=uuuuuu] (-1.1994933333333308,0.10001777777777895) node {$(-1, 0)$};
 \draw [fill=uuuuuu] (0.,-1.) circle (1.5pt);
-\draw[color=uuuuuu] (0.20402666666666988,-1.1336888888888862) node {$(0, -1)$};
+\draw[color=uuuuuu] (-0.20402666666666988,-1.1336888888888862) node {$(0, -1)$};
 \draw [fill=uuuuuu] (0.,0.) circle (1.5pt);
-\draw [fill=uuuuuu] (0.5527662281876642,0.8333363648462626) circle (1.5pt);
-\draw[color=uuuuuu] (0.98928,0.84257777777778) node {T($\cos\alpha$,$\sin\alpha$)};
+\draw [fill=uuuuuu] (0.5527662281876642,0.8333363648462626) circle (1.5pt) node[right] {$P$};
+\draw[color=uuuuuu] (0.98928,0.84257777777778);
 \draw [fill=uuuuuu] (0.5527662281876642,0.) circle (1.5pt);
 \draw[color=qqqqff] (0.704773333333337,0.4413511111111119) node {$\sin\alpha$};
 \draw[color=ffqqqq] (0.3856533333333367,-0.07699555555555419) node {$\cos\alpha$};
 \draw[color=qqwuqq] (0.26181333333333658,0.09319111111111231) node {$\alpha$};
-\end{tikzpicture}
-
-\
-
-Funkciji tangens in kotangens prav tako definiramo s pomočjo enotske krožnice in poltraka iz izhodišča. Za ponazoritev $\tg\alpha$ narišemo vzporednico $y$-osi skozi $(1,0)$. V dobljenem pravokotnem trikotniku meri kateta, ki leži na $x$-osi, 1. Ordinata presečišča vzporednice in poltraka predstavlja velikost funkcije $\tg\alpha$. Za ponazoritev $\ctg\alpha$ pa narišemo vzporednico $x$-osi skozi (0,1). Abscisa presečišča vzporednice in poltraka predstavlja velikost funkcije $\ctg\alpha$. 
-
-\definecolor{wqwqwq}{rgb}{0.3764705882352941,0.3764705882352941,0.3764705882352941}
-\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\definecolor{qqffqq}{rgb}{0.,1.,0.}
-\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
-\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
-\definecolor{yqyqyq}{rgb}{0.5019607843137255,0.5019607843137255,0.5019607843137255}
-\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=3.0cm,y=3.0cm]
-\draw[->,color=black] (-1.6944,0.) -- (1.9408,0.);
-\foreach \x in {-1.5,-1.,-0.5,0.5,1.,1.5}
-\draw[shift={(\x,0)},color=black] (0pt,-2pt);
-\draw[color=black] (1.8384,0.0256) node [anchor=south west] { x};
-\draw[->,color=black] (0.,-1.1556) -- (0.,1.6476);
-\foreach \y in {-1.,-0.5,0.5,1.,1.5}
-\draw[shift={(0,\y)},color=black] (-2pt,0pt);
-\draw[color=black] (0.032,1.5068) node [anchor=west] { y};
-\clip(-1.6944,-1.1556) rectangle (1.9408,1.6476);
-\draw [shift={(0.,0.)},line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0.:0.192) arc (0.:55.093100573353155:0.192) -- cycle;
-\draw [line width=1.6pt,color=wqwqwq] (0.,0.) circle (3.cm);
-\draw [line width=1.pt,color=cqcqcq,domain=-1.6944:1.9408] plot(\x,{(-1.-0.*\x)/-1.});
-\draw [line width=1.pt,color=cqcqcq] (1.,-1.1556) -- (1.,1.6476);
-\draw [line width=2.pt,domain=0.0:1.9407999999999999] plot(\x,{(-0.--0.8200829734309459*\x)/0.5722446301090631});
-\draw [line width=2.pt,color=ffxfqq] (0.,1.)-- (0.6977886977886979,1.);
-\draw [line width=2.pt,color=qqffqq] (1.,0.)-- (1.,1.4330985915492955);
-\draw [color=ffxfqq](-1.2144,-0.3812) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=ffxfqq](0.4496,1.4748) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=qqffqq](1.224,0.9308) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=qqffqq](-1.0416,-0.6116) node[anchor=north west] {$\mathbf{+}$};
-\draw [color=ffxfqq](-1.2272,0.7028) node[anchor=north west] {$\mathbf{-}$};
-\draw [color=ffxfqq](0.6992,-0.6884) node[anchor=north west] {$\mathbf{-}$};
-\draw [color=qqffqq](-0.9776,0.9588) node[anchor=north west] {$\mathbf{-}$};
-\draw [color=qqffqq](1.0192,-0.4452) node[anchor=north west] {$\mathbf{-}$};
-\draw [fill=uuuuuu] (1.,0.) circle (1.5pt);
-\draw[color=uuuuuu] (1.1708,0.0956) node {$(1, 0)$};
-\draw [fill=uuuuuu] (0.,1.) circle (1.5pt);
-\draw[color=uuuuuu] (-0.1708,1.1196) node {$(0, 1)$};
-\draw [fill=uuuuuu] (0.6977886977886979,1.) circle (1.5pt);
-\draw [fill=uuuuuu] (1.,1.4330985915492955) circle (1.5pt);
+\draw [line width=2.pt,color=ffxfqq] (0.,1.)-- (0.67,1.);
+\draw [line width=2.pt,color=qqffqq] (1.,0.)-- (1.,1.5200985915492955);
 \draw[color=ffxfqq] (0.3824,1.1132) node {$\ctg\alpha$};
 \draw[color=qqffqq] (1.1748,0.674) node {$\tg\alpha$};
-\draw[color=qqwuqq] (0.2636,0.0764) node {$\alpha$};
 \end{tikzpicture}
-
-\
 
 Vrednost funkcije sinus in kosinus se ne spremeni, če vrednosti kota prištejemo večkratnik kota $2\pi$. Zato sta periodični funkciji z osnovno periodo $2\pi$. Funkciji tangens in kotangens sta periodični z osnovno periodo $\pi$. Velja:
 \begin{align*}
@@ -207,6 +144,8 @@ Vrednost funkcije sinus in kosinus se ne spremeni, če vrednosti kota prištejem
 \tg\alpha&= \tg(\alpha +k\pi)\\
 \ctg\alpha&= \ctg(\alpha +k\pi); \quad k \in\mathbb{Z}
 \end{align*}
+
+\ 
 
 Kote, ki so večji od $90^{\circ}$ in manjši od $360^{\circ}$, pretvarjamo v ostre kote po naslednjih obrazcih:
 \begin{itemize}
@@ -374,7 +313,7 @@ in minimume pri
 x =\pi + 2 k\pi, \:   k\in \mathbb{Z}.
 \]
 
-Funkcija $f(x) = tanx$ je, kot smo že prej spoznali, pravzaprav funkcija razmerja med sinusom in kosinusom:
+Funkcija $f(x) = \tg x$ je, kot smo že prej spoznali, pravzaprav funkcija razmerja med sinusom in kosinusom:
 \[
 f(x) = tanx = \frac{sinx}{cosx}.
 \]
@@ -404,7 +343,7 @@ Definicijsko območje funkcije je torej unija intervalov ($\frac{\pi}{2} + k\pi$
 \draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=ffqqqq] (1.57,-4.3) -- (1.57,4.3);
 \end{tikzpicture}
 
-Od kotnih funkcij nam ostane le še funkcija $f(x) = cotx$, ki pa je pravzaprav inverz funkcije tangensa. Ničle ima tam, kjer ima tangens pole, in pole tam, kjer ima tangens pole.
+Od kotnih funkcij nam ostane le še funkcija $f(x) = \ctg x$, ki pa je pravzaprav inverz funkcije tangensa. Ničle ima tam, kjer ima tangens pole, in pole tam, kjer ima tangens pole.
 Graf funkcije je torej takšen: \\
 
 % graf kotangensa v osnovni obliki
@@ -454,7 +393,7 @@ Graf funkcije je torej takšen: \\
 % v okolje "odgovor".
 
 \begin{vaja}
-V pravokotnem trikotniku, kjer je kot $\beta= 90^{\circ}$, merita stranici $a=5$ in $b=13$. Z uporabo kotnih funkcij določi kota $\alpha$ in $\gamma$ na minuto natančno, ter izračunaj stranico $c$. Izračunaj še vrednosti $\sin\gamma$, $\cos\alpha$, $\tg\alpha$ in $\ctg\alpha$. Kote izračunaj na minuto natančno, stranico na dve mesti natančno, vrednosti kotnih funkcij pa na štiri decimalna mesta natančno.
+V pravokotnem trikotniku s kotom $\beta= 90^{\circ}$, merita stranici $a=5$ in $b=13$. Z uporabo kotnih funkcij določi kota $\alpha$ in $\gamma$ na minuto natančno, ter izračunaj stranico $c$ na dve mesti natančno. Izračunaj še vrednosti $\sin\gamma$, $\cos\alpha$, $\tg\alpha$ in $\ctg\alpha$  na štiri decimalna mesta natančno.
 	\begin{odgovor}
 $\alpha=22^{\circ}37'$, $\gamma=67^{\circ}23'$, $c=12$, $\sin\gamma=\cos\alpha=0.9231$, $\tg\alpha=0.4167$ in $\ctg\alpha=2.4000$
 	\end{odgovor}
