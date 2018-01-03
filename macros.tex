@@ -43,6 +43,17 @@
 \newcommand{\ctg}{\operatorname{ctg}}
 \newcommand{\arctg}{\operatorname{arctg}}
 
+\newcommand{\koordinate}[4]
+{
+\draw[->] (-#1,0) -- (#2,0) node[below] {$x$};
+%\foreach \x in {*,...,-1,1,2,...,*}
+%\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->] (0,-#3) -- (0,#4) node[left] {$y$};
+%\foreach \y in {*,...,-1,1,2,...,*}
+%\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\node[below left] at (0,0) {\footnotesize $0$};
+}
+%argument ena in dva se navezujeta na x os, 3 in 4 pa na y os; argumenti so samo celoštevilski. Kar je zakomentirano naj vsak kopira in vstavi svoje meje namesto zvezdic (pazi, da ne prideš do roba). Uporabljamo barve: blue, red, green, orange, grey (siva je za asimptote). Vsi originalni grafi so modre barve, vsak naslednji pa sledi vrstnemu redu prej naštetih. Debelina črt: debelina grafa je 2pt, vse pomožne črte 1pt, vse točke enake debeline 1,5pt. 
 
 %%% Local Variables:
 %%% mode: latex
